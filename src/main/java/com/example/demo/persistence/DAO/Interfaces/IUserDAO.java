@@ -7,8 +7,6 @@ import java.util.Optional;
 
 public interface IUserDAO {
 
-    // El DAO opera con el entity no con DTO, ya que interactua con la BD y
-    //en la capa de persistencia la logica y metodos son con entity
 
     List<UserEntity> findAll();
     Optional<UserEntity> findById (Long id);
