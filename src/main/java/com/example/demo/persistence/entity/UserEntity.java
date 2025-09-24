@@ -6,6 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
+import lombok.AccessLevel;
 
 @Getter
 @Setter
@@ -14,20 +16,21 @@ import lombok.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
+@FieldDefaults(level = AccessLevel.PRIVATE)   
 public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+     Long id;
 
-    private String name;
+    String name;
 
     @Column(name = "last_name")
-    private String lastName;
+    String lastName;
 
-    private  String email;
+    String email;
 
-    private byte age;
+    byte age;
 
 
 }
