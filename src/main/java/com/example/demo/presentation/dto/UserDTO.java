@@ -4,20 +4,23 @@ import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
+import lombok.AccessLevel;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)    
 public class UserDTO {
 
-    private Long id;
+ Long id;
 
-    private String name;
+ String name;
 
-    private String lastName;
+ String lastName;
 
-    private  String email;
+ String email;
 
-    private byte age;
+ byte age;
 
 }
